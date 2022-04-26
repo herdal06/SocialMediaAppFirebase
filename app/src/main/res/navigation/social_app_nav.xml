@@ -15,7 +15,9 @@
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_loginFragment_to_postListFragment"
-            app:destination="@id/postListFragment" />
+            app:destination="@id/postListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -27,7 +29,9 @@
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_signUpFragment_to_postListFragment"
-            app:destination="@id/postListFragment" />
+            app:destination="@id/postListFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/postListFragment"
@@ -40,6 +44,9 @@
         <action
             android:id="@+id/action_postListFragment_to_profileDetailsFragment"
             app:destination="@id/profileDetailsFragment" />
+        <action
+            android:id="@+id/action_postListFragment_to_likedPostsFragment"
+            app:destination="@id/likedPostsFragment" />
     </fragment>
     <fragment
         android:id="@+id/addPostFragment"
@@ -67,6 +74,9 @@
         <action
             android:id="@+id/action_profileDetailsFragment_to_editProfileFragment2"
             app:destination="@id/editProfileFragment2" />
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_likedPostsFragment"
+            app:destination="@id/likedPostsFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment2"
@@ -79,5 +89,17 @@
         <action
             android:id="@+id/action_editProfileFragment2_to_postListFragment"
             app:destination="@id/postListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedPostsFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.post.LikedPostsFragment"
+        android:label="fragment_liked_posts"
+        tools:layout="@layout/fragment_liked_posts" >
+        <action
+            android:id="@+id/action_likedPostsFragment_to_postListFragment"
+            app:destination="@id/postListFragment" />
+        <action
+            android:id="@+id/action_likedPostsFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
     </fragment>
 </navigation>
