@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/social_app_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.registration.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_postListFragment"
+            app:destination="@id/postListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.registration.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_postListFragment"
+            app:destination="@id/postListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postListFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.post.PostListFragment"
+        android:label="fragment_post_list"
+        tools:layout="@layout/fragment_post_list" >
+        <action
+            android:id="@+id/action_postListFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_postListFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.post.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPostFragment_to_postListFragment"
+            app:destination="@id/postListFragment" />
+        <action
+            android:id="@+id/action_addPostFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailsFragment"
+        android:name="com.herdal.socialmediaappfirebase.view.profile.ProfileDetailsFragment"
+        android:label="fragment_profile_details"
+        tools:layout="@layout/fragment_profile_details" >
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_postListFragment"
+            app:destination="@id/postListFragment" />
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_editProfileFragment2"
+            app:destination="@id/editProfileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment2"
+        android:name="com.herdal.socialmediaappfirebase.view.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment2_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment2_to_postListFragment"
+            app:destination="@id/postListFragment" />
+    </fragment>
+</navigation>
