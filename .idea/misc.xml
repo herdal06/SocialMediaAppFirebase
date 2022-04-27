@@ -3,12 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.277" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.277" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.277" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.254" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.254" />
+        <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.254" />
+        <entry key="app/src/main/res/drawable/round_border.xml" value="0.254" />
+        <entry key="app/src/main/res/drawable/wave.xml" value="0.277" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_add_post.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_liked_posts.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_post_list.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_profile_details.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.35625" />
       </map>
