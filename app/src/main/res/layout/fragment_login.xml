@@ -11,7 +11,7 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:background="@drawable/wave"
+        android:background="@drawable/ic_wave5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topView" />
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="@+id/topView" />
 
     <EditText
-        android:id="@+id/editTextLoginEmail"
+        android:id="@+id/editTextSignUpEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <EditText
-        android:id="@+id/editTextLoginPassword"
+        android:id="@+id/editTextSignUpPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpEmail" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -98,10 +98,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpPassword" />
 
     <TextView
-        android:id="@+id/textViewGoToSignUp"
+        android:id="@+id/textViewGoToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
