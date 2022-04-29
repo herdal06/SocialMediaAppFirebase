@@ -30,13 +30,6 @@ class SignUpFragment : Fragment() {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        auth = Firebase.auth
-
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-            val action = SignUpFragmentDirections.actionSignUpFragmentToPostListFragment()
-            Navigation.findNavController(view).navigate(action)
-        }
 
         return view
     }
@@ -44,7 +37,13 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        auth = Firebase.auth
 
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val action = SignUpFragmentDirections.actionSignUpFragmentToPostListFragment()
+            Navigation.findNavController(view).navigate(action)
+        }
 
 
         binding.textViewGoToLogin.setOnClickListener {
