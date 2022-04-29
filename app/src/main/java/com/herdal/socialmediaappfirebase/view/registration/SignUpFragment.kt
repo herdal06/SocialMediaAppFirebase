@@ -18,12 +18,25 @@ class SignUpFragment : Fragment() {
 
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var auth: FirebaseAuth
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        auth = Firebase.auth
+
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val action = SignUpFragmentDirections.actionSignUpFragmentToPostListFragment()
+            Navigation.findNavController(view).navigate(action)
+        }
 
         return view
     }
@@ -31,15 +44,11 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
+
         binding.textViewGoToLogin.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
-        }
-        auth = Firebase.auth
-
-        val currentUser = auth.currentUser
-        if (currentUser != null){
-            val action = SignUpFragmentDirections.actionSignUpFragmentToPostListFragment()
-            Navigation.findNavController(view).navigate(action)
         }
 
         binding.buttonSignUp.setOnClickListener { view ->
@@ -51,14 +60,16 @@ class SignUpFragment : Fragment() {
         val email = binding.editTextSignUpEmail.text.toString()
         val password = binding.editTextSignUpPassword.text.toString()
 
-        if(email.equals("") || password.equals("")) {
-            Toast.makeText(requireContext(),"PLease fill out all the fields!",Toast.LENGTH_SHORT).show()
+        if (email.equals("") || password.equals("")) {
+            Toast.makeText(requireContext(), "Please fill out all the fields!", Toast.LENGTH_SHORT)
+                .show()
         } else {
             auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
                 val action = SignUpFragmentDirections.actionSignUpFragmentToPostListFragment()
                 Navigation.findNavController(view).navigate(action)
             }.addOnFailureListener { exception ->
-                Toast.makeText(requireContext(),exception.localizedMessage,Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), exception.localizedMessage, Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
