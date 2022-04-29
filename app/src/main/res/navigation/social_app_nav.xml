@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_postListFragment_to_likedPostsFragment"
             app:destination="@id/likedPostsFragment" />
+        <action
+            android:id="@+id/action_postListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/addPostFragment"
