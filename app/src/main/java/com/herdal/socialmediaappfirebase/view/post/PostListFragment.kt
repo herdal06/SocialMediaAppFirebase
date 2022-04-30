@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.herdal.socialmediaappfirebase.R
@@ -76,13 +77,16 @@ class PostListFragment : Fragment() {
     }
 
     private fun getData() {
-        db.collection("Posts").addSnapshotListener { value, error ->
+        db.collection("Posts").orderBy("date",Query.Direction.DESCENDING).addSnapshotListener { value, error ->
             if(error != null) {
                 Toast.makeText(requireContext(),error.localizedMessage,Toast.LENGTH_SHORT).show()
             } else {
                 if(value != null) {
                     if(!value.isEmpty) {
                         val documents = value.documents
+
+                        postList.clear()
+
                         for(document in documents) {
                             val useremail = document.get("useremail") as String
                             val comment = document.get("comment") as String
