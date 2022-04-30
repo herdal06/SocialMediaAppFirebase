@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/drawable/ic_pencil.xml" value="0.209" />
         <entry key="app/src/main/res/drawable/ic_test.xml" value="0.1835" />
         <entry key="app/src/main/res/drawable/ic_test2.xml" value="0.1835" />
+        <entry key="app/src/main/res/drawable/post_row.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/round_border.xml" value="0.254" />
         <entry key="app/src/main/res/drawable/wave.xml" value="0.277" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
@@ -24,6 +25,7 @@
         <entry key="app/src/main/res/layout/fragment_post_list.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_profile_details.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/post_row.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.23697916666666666" />
