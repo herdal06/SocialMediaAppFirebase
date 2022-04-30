@@ -9,6 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.herdal.socialmediaappfirebase.R
 import com.herdal.socialmediaappfirebase.databinding.FragmentPostListBinding
+import kotlinx.android.synthetic.main.fragment_post_list.view.*
 
 class PostListFragment : Fragment() {
 
@@ -26,6 +27,10 @@ class PostListFragment : Fragment() {
         val view = binding.root
 
         setHasOptionsMenu(true)
+
+        view.floatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.action_postListFragment_to_addPostFragment)
+        }
 
         return view
     }
